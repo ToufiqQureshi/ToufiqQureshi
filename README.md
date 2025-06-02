@@ -1,17 +1,17 @@
-<h2 align="left">👋 Hey! I'm Toufiq — ML Engineer & AI Agent Developer from India 🇮🇳</h2>
+<h2 align="left">👋 Hey there! I'm Toufiq — ML Engineer & AI Agent Developer from India 🇮🇳</h2>
 
 ---
 
-### 🧠 Who Am I?
+### 🧠 About Me
 
-🚀 Machine Learning Engineer working on cutting-edge **Generative AI** solutions  
-🧩 Building **AI Agents** using tools like **LangChain**, **Agno**, and **Vector DBs**  
-🐳 Experienced with **Docker**, **FastAPI**, and LLM fine-tuning  
-🧪 Passionate about **PyTorch**, model optimization, and scalable ML workflows  
+🚀 Passionate Machine Learning Engineer specializing in cutting-edge **Generative AI** solutions  
+🤖 Developer of intelligent **AI Agents** using tools like **LangChain**, **Agno**, and **Vector Databases**  
+🐳 Proficient in **Docker**, **FastAPI**, and fine-tuning Large Language Models (LLMs)  
+🧪 Enthusiast of **PyTorch**, model optimization, and scalable ML workflows  
 
 ---
 
-### 🔧 Tech I'm Using
+### 🔧 Technologies & Tools
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="Python" />
@@ -36,7 +36,7 @@
 
 ---
 
-### 🔗 Let's Connect
+### 🔗 Connect with Me
 
 <div align="left">
   <a href="mailto:your-email@gmail.com">
@@ -63,4 +63,3 @@
 ### 🎬 Just for Fun
 
 <img align="right" height="150" src="https://i.imgflip.com/65efzo.gif" alt="coding gif" />
-
