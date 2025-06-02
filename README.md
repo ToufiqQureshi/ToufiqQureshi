@@ -52,11 +52,8 @@
 
 ---
 
-### 🐍 GitHub Activity Snake
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ToufiqQureshi/ToufiqQureshi/output/snake.svg" alt="snake gif" />
-</p>
+### 🐍
+![GitHub Snake](https://github.com/ToufiqQureshi/ToufiqQureshi/blob/output/github-snake.svg)
 
 ---
 
