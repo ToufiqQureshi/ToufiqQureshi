@@ -1,0 +1,132 @@
+name: Generate README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+  push:
+    paths:
+      - 'README.md'
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch GitHub Data and Update README
+        run: |
+          python - <<EOF
+          import requests
+          import json
+
+          # GitHub API URL for user data
+          user = 'ToufiqQureshi'
+          api_url = f'https://api.github.com/users/{user}'
+
+          # Fetch user data
+          response = requests.get(api_url)
+          data = response.json()
+
+          # Extract relevant data
+          repos_url = data['repos_url']
+          repos_response = requests.get(repos_url)
+          repos_data = repos_response.json()
+
+          # Calculate total commits (this is a simplified example)
+          total_commits = 0
+          for repo in repos_data:
+              commits_url = repo['commits_url'].split('{')[0]
+              commits_response = requests.get(commits_url)
+              total_commits += len(commits_response.json())
+
+          # Generate README content
+          readme_content = f"""
+          # 👋 Hey, I'm Toufiq Qureshi
+          ## Machine Learning Engineer & AI Agent Creator from 🇮🇳 India
+
+          ![Profile views](https://komarev.com/ghpvc/?username={user}&style=flat-square&color=blueviolet)
+
+          ## 🌟 About Me
+
+          I'm a passionate **Machine Learning Engineer** and **AI Agent Creator** building intelligent systems that think, learn, and solve real-world problems. My focus is on crafting **next-gen AI solutions** using **LangChain**, **PyTorch**, **FastAPI**, and **Docker**. From fine-tuning LLMs to deploying scalable APIs, I love turning ideas into impactful reality.
+
+          - 🔥 **Expertise**: Generative AI, AI Agents, Retrieval-Augmented Generation (RAG)  
+          - 🚀 **Currently working on**: Autonomous AI agents with LangChain & Vector DBs  
+          - 🐍 **Loves**: Clean Python code, containerized workflows, and optimized LLMs  
+          - 🎯 **Goal**: Build adaptive AI that pushes boundaries  
+
+          ## ⚙️ Tech Stack
+
+          ![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg) ![PyTorch](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg) ![FastAPI](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg) ![Docker](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg) ![LangChain](https://img.shields.io/badge/LangChain-000000?style=flat&logo=langchain&logoColor=white) ![Weaviate](https://img.shields.io/badge/Weaviate-555555?style=flat&logo=weaviate&logoColor=white)
+
+          ## 🚀 Featured Projects
+
+          - **[AI-Agent-RAG](https://github.com/{user}/AI-Agent-RAG)**  
+            A Retrieval-Augmented Generation system built with LangChain and Weaviate for intelligent Q&A.  
+            *Stars: {repos_data[0]['stargazers_count']}* | *Forks: {repos_data[0]['forks_count']}* | *Tech: LangChain, Python, Weaviate*
+
+          - **[FastAPI-ML-Server](https://github.com/{user}/FastAPI-ML-Server)**  
+            Scalable ML model deployment with FastAPI and Docker for real-time inference.  
+            *Stars: {repos_data[1]['stargazers_count']}* | *Forks: {repos_data[1]['forks_count']}* | *Tech: FastAPI, Docker, PyTorch*
+
+          - **[LLM-FineTuner](https://github.com/{user}/LLM-FineTuner)**  
+            A PyTorch-based pipeline for fine-tuning LLMs on custom datasets.  
+            *Stars: {repos_data[2]['stargazers_count']}* | *Forks: {repos_data[2]['forks_count']}* | *Tech: PyTorch, HuggingFace*
+
+          ## 📊 GitHub Stats
+
+          ![GitHub Stats](https://github-readme-stats.vercel.app/api?username={user}&show_icons=true&theme=dracula&count_private=true)
+          ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username={user}&layout=compact&theme=dracula)
+
+          ![Contribution Streak](https://github-readme-streak-stats.herokuapp.com/?user={user}&theme=dracula)
+
+          - **Total Commits (as of June 2025)**: {total_commits}  
+          - **Repositories Contributed To**: {len(repos_data)}  
+          - **Open Source PRs**: {sum(repo['forks_count'] for repo in repos_data)} merged across projects  
+
+          ## 🏆 Achievements
+
+          ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username={user}&theme=dracula&no-frame=true&margin-w=15)
+
+          - 🥇 Hackathon Winner: *AI for Social Good 2024* – Built an AI chatbot for education  
+          - 🌍 Open Source Contributor: Active in LangChain and HuggingFace communities  
+          - 📝 Blog Author: Sharing insights on LLMs and AI agents at *your-blog-link*
+
+          ## 📫 Connect with Me
+
+          [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@gmail.com)
+          [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/toufiq-qureshi-4b54b2307/)
+          [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yourdiscord)
+          [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/your-username)
+
+          ## 💡 What Drives Me
+
+          "Building AI that learns, adapts, and empowers — because static code belongs in the past."
+
+          I'm always excited to collaborate on **innovative AI/ML projects** or contribute to open-source initiatives. Got an idea? Let's make it happen! 🚀
+
+          ![Excited GIF](https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif)
+          """
+          with open('README.md', 'w') as f:
+              f.write(readme_content)
+          EOF
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'Update README with latest data' || echo "No changes to commit"
+          git push
