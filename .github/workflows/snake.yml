@@ -1,25 +1,118 @@
-name: Generate Snake Animation
+name: Generate README
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # daily at midnight
-  workflow_dispatch:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+  push:
+    paths:
+      - 'README.md'
 
 jobs:
-  generate:
+  generate-readme:
     runs-on: ubuntu-latest
-    steps:
-      - name: Generate Snake
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ToufiqQureshi
-          outputs: |
-            ./dist/snake.svg
 
-      - name: Push to GitHub
-        uses: crazy-max/ghaction-github-pages@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch GitHub Data and Update README
+        run: |
+          python - <<EOF
+          import requests
+          import json
+
+          # GitHub API URL for user data
+          user = 'ToufiqQureshi'
+          api_url = f'https://api.github.com/users/{user}'
+
+          # Fetch user data
+          response = requests.get(api_url)
+          data = response.json()
+
+          # Extract relevant data
+          commits_url = data['repos_url']
+          commits_response = requests.get(commits_url)
+          commits_data = commits_response.json()
+
+          # Calculate total commits
+          total_commits = sum(commit['stargazers_count'] for commit in commits_data)
+
+          # Generate README content
+          readme_content = f"""
+          # 👋 Hey, I'm Toufiq Qureshi
+          ## Machine Learning Engineer & AI Agent Creator from 🇮🇳 India
+
+          ![Profile views](https://komarev.com/ghpvc/?username={user}&style=flat-square&color=blueviolet)
+
+          ## 🌟 About Me
+
+          I'm a passionate **Machine Learning Engineer** and **AI Agent Creator** building intelligent systems that think, learn, and solve real-world problems. My focus is on crafting **next-gen AI solutions** using **LangChain**, **PyTorch**, **FastAPI**, and **Docker**. From fine-tuning LLMs to deploying scalable APIs, I love turning ideas into impactful reality.
+
+          - 🔥 **Expertise**: Generative AI, AI Agents, Retrieval-Augmented Generation (RAG)  
+          - 🚀 **Currently working on**: Autonomous AI agents with LangChain & Vector DBs  
+          - 🐍 **Loves**: Clean Python code, containerized workflows, and optimized LLMs  
+          - 🎯 **Goal**: Build adaptive AI that pushes boundaries  
+
+          ## ⚙️ Tech Stack
+
+          ![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg) ![PyTorch](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg) ![FastAPI](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg) ![Docker](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg) ![LangChain](https://img.shields.io/badge/LangChain-000000?style=flat&logo=langchain&logoColor=white) ![Weaviate](https://img.shields.io/badge/Weaviate-555555?style=flat&logo=weaviate&logoColor=white)
+
+          ## 🚀 Featured Projects
+
+          - **[AI-Agent-RAG](https://github.com/{user}/AI-Agent-RAG)**  
+            A Retrieval-Augmented Generation system built with LangChain and Weaviate for intelligent Q&A.  
+            *Stars: {commits_data[0]['stargazers_count']}* | *Forks: {commits_data[0]['forks_count']}* | *Tech: LangChain, Python, Weaviate*
+
+          - **[FastAPI-ML-Server](https://github.com/{user}/FastAPI-ML-Server)**  
+            Scalable ML model deployment with FastAPI and Docker for real-time inference.  
+            *Stars: {commits_data[1]['stargazers_count']}* | *Forks: {commits_data[1]['forks_count']}* | *Tech: FastAPI, Docker, PyTorch*
+
+          - **[LLM-FineTuner](https://github.com/{user}/LLM-FineTuner)**  
+            A PyTorch-based pipeline for fine-tuning LLMs on custom datasets.  
+            *Stars: {commits_data[2]['stargazers_count']}* | *Forks: {commits_data[2]['forks_count']}* | *Tech: PyTorch, HuggingFace*
+
+          ## 📊 GitHub Stats
+
+          ![GitHub Stats](https://github-readme-stats.vercel.app/api?username={user}&show_icons=true&theme=dracula&count_private=true)
+          ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username={user}&layout=compact&theme=dracula)
+
+          ![Contribution Streak](https://github-readme-streak-stats.herokuapp.com/?user={user}&theme=dracula)
+
+          - **Total Commits (as of June 2025)**: {total_commits}  
+          - **Repositories Contributed To**: {len(commits_data)}  
+          - **Open Source PRs**: {sum(commit['forks_count'] for commit in commits_data)} merged across projects  
+
+          ## 🏆 Achievements
+
+          ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username={user}&theme=dracula&no-frame=true&margin-w=15)
+
+          - 🥇 Hackathon Winner: *AI for Social Good 2024* – Built an AI chatbot for education  
+          - 🌍 Open Source Contributor: Active in LangChain and HuggingFace communities  
+          - 📝 Blog Author: Sharing insights on LLMs and AI agents at *your-blog-link*
+
+          ## 📫 Connect with Me
+
+          [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@gmail.com)
+          [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/toufiq-qureshi-4b54b2307/)
+          [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yourdiscord)
+          [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/your-username)
+
+          ## 💡 What Drives Me
+
+          "Building AI that learns, adapts, and empowers — because static code belongs in the past."
+
+          I'm always excited to collaborate on **innovative AI/ML projects** or contribute to open-source initiatives. Got an idea? Let's make it happen! 🚀
+
+          ![Excited GIF](https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif)
+          """
+          with open
