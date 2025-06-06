@@ -40,17 +40,15 @@ I'm a passionate **Machine Learning Engineer** and **AI Agent Creator** building
 
 - **[AI-Agent-RAG](https://github.com/ToufiqQureshi/AI-Agent-RAG)**  
   A Retrieval-Augmented Generation system built with LangChain and Weaviate for intelligent Q&A.  
-  *Stars: 120* | *Forks: 25* | *Tech: LangChain, Python, Weaviate*
+  *Stars: {{AI_AGENT_RAG_STARS}}* | *Forks: {{AI_AGENT_RAG_FORKS}}* | *Tech: LangChain, Python, Weaviate*
 
 - **[FastAPI-ML-Server](https://github.com/ToufiqQureshi/FastAPI-ML-Server)**  
   Scalable ML model deployment with FastAPI and Docker for real-time inference.  
-  *Stars: 85* | *Forks: 15* | *Tech: FastAPI, Docker, PyTorch*
+  *Stars: {{FASTAPI_ML_SERVER_STARS}}* | *Forks: {{FASTAPI_ML_SERVER_FORKS}}* | *Tech: FastAPI, Docker, PyTorch*
 
 - **[LLM-FineTuner](https://github.com/ToufiqQureshi/LLM-FineTuner)**  
   A PyTorch-based pipeline for fine-tuning LLMs on custom datasets.  
-  *Stars: 60* | *Forks: 10* | *Tech: PyTorch, HuggingFace*
-
-*Replace project details, stars, and forks with actual data from your GitHub repos.*
+  *Stars: {{LLM_FINETUNER_STARS}}* | *Forks: {{LLM_FINETUNER_FORKS}}* | *Tech: PyTorch, HuggingFace*
 
 ---
 
@@ -65,11 +63,7 @@ I'm a passionate **Machine Learning Engineer** and **AI Agent Creator** building
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ToufiqQureshi&theme=dracula" alt="Contribution Streak" />
 </p>
 
-- **Total Commits (as of June 2025)**: *[Your commit count]* (e.g., 1,500+ commits; check your GitHub profile or Insights)  
-- **Repositories Contributed To**: *[Your contribution count]* (e.g., 40+ repos; check your contribution activity)  
-- **Open Source PRs**: *[Your PR count]* merged across projects (e.g., 60+ PRs; check your PR history)
-
-*Replace placeholders with your actual stats from your GitHub profile.*
+- **Last Updated:** {{LAST_UPDATED}}
 
 ---
 
@@ -82,8 +76,6 @@ I'm a passionate **Machine Learning Engineer** and **AI Agent Creator** building
 - 🥇 Hackathon Winner: *AI for Social Good 2024* – Built an AI chatbot for education  
 - 🌍 Open Source Contributor: Active in LangChain and HuggingFace communities  
 - 📝 Blog Author: Sharing insights on LLMs and AI agents at *[your-blog-link]*
-
-*Replace placeholders with your actual achievements or blog links.*
 
 ---
 
@@ -104,8 +96,6 @@ I'm a passionate **Machine Learning Engineer** and **AI Agent Creator** building
   </a>
 </p>
 
-*Update email, Discord, and X links with your actual handles.*
-
 ---
 
 ### 💡 What Drives Me
@@ -117,5 +107,3 @@ I'm always excited to collaborate on **innovative AI/ML projects** or contribute
 <p align="center">
   <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" height="100" />
 </p>
-
----
