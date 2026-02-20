@@ -2,7 +2,7 @@
 
 # Hi there, I'm Toufiq Qureshi! 👋
 
-### Marketing Data Scientist @ Revmerito | Agentic AI System | AI & Cloud Enthusiast | Open Source Contributor
+### Agentic ai Developer @ Revmerito | Agentic AI System | AI & Cloud Enthusiast | Open Source Contributor
 
 </div>
 
