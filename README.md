@@ -1,79 +1,74 @@
 <div align="center">
 
-# Hi, I'm Toufiq Qureshi 👋
-
-### Full Stack AI Engineer | Built Staybooker — Production Hotel SaaS Solo | FastAPI · React · Agno · LangChain
+# Toufiq Qureshi
+### Full Stack AI Engineer
+### I build production-grade AI systems — not prototypes, not demos.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/toufiq-qureshi/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:toufiqqureshi651@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ToufiqQureshi)
 
-<img src="https://komarev.com/ghpvc/?username=ToufiqQureshi&style=for-the-badge&color=blueviolet" alt="Profile Views" />
+![Profile Views](https://komarev.com/ghpvc/?username=ToufiqQureshi&style=for-the-badge&color=blueviolet)
 
 </div>
 
 ---
 
-## 🚀 About Me
+## 🏗️ What I've Built
 
-```python
-class ToufiqQureshi:
-    def __init__(self):
-        self.name = "Toufiq Qureshi"
-        self.role = "Full Stack AI Engineer"
-        self.location = "Mumbai, Maharashtra, India 🇮🇳"
-        self.experience = "2 years"
-        self.current_focus = "Agentic AI Systems & Production SaaS"
-        self.fuelled_by = "Chai ☕"
+### Staybooker — AI-Powered Multi-Tenant Hotel Booking SaaS
+> Built and deployed solo. ~75,000 lines of code. Real payments. Real users.
 
-        self.what_i_build = {
-            "production": ["Multi-tenant SaaS", "Agentic AI systems", "RAG pipelines"],
-            "stack": ["FastAPI", "React", "Supabase", "Redis", "Agno", "LangChain"],
-            "not_this": ["Prototypes", "Demos", "Notebooks that never ship"]
-        }
-
-    def __str__(self):
-        return "I build production-grade AI systems — real software handling real money and real users."
-
-engineer = ToufiqQureshi()
-print(engineer)
-```
+| Category | Details |
+|----------|---------|
+| 🔌 **Backend** | 200+ REST API endpoints · FastAPI · Supabase Postgres |
+| 🗄️ **Data Layer** | 150+ data models · SQLModel · Redis caching with in-memory fallback |
+| 🤖 **AI Agents** | 3 production agents (Agno + Groq LLMs) — hotelier analytics copilot, guest concierge bot, WhatsApp sales agent |
+| 💳 **Payments** | HMAC-SHA256 verified Razorpay webhooks · server-side amount validation |
+| 🎨 **Frontend** | React 18 + TypeScript + TanStack Query · shadcn/ui · Recharts · Cloudflare Pages |
+| 🔐 **Security** | JWT auth · OWNER/MANAGER/STAFF RBAC · strict multi-tenant data isolation |
+| 🧪 **Testing** | 59 pytest test suites · GitHub Actions CI |
+| 📡 **Integrations** | WhatsApp Business API · STAAH Channel Manager · Google Reviews API · SSE real-time updates |
 
 ---
 
-## 🏗️ Featured Project — Staybooker
+## 🤖 Other Projects
 
-> **AI-Powered Multi-Tenant Hotel Booking SaaS** — Built and deployed solo
+### Multi-Agent SEO Automation — Revmerito
+- Orchestrated multi-agent pipeline (CrewAI + LangChain + SeleniumBase) processing 800–1000 URLs/day
+- Eliminated 150+ manual hours/month · 85% reduction in data acquisition costs
+- 99.2% uptime in production
 
-| What | Details |
-|------|---------|
-| 🔌 API | 200+ REST endpoints (FastAPI + Supabase Postgres) |
-| 🗄️ Models | 150+ data models |
-| 🤖 AI Agents | 3 production agents (Agno + Groq LLMs) — hotelier analytics copilot, guest concierge, WhatsApp sales bot |
-| 💳 Payments | HMAC-SHA256 verified Razorpay webhooks |
-| ⚡ Caching | Redis with automatic in-memory fallback (zero downtime) |
-| 🎨 Frontend | React 18 + TypeScript + TanStack Query on Cloudflare Pages |
-| 🔐 Auth | JWT + OWNER/MANAGER/STAFF RBAC, strict multi-tenant data isolation |
-| 🧪 Tests | 59 pytest test suites + GitHub Actions CI |
-| 📏 Scale | ~75,000 lines of code |
+### RAG Pipeline for Business Intelligence
+- Hybrid search architecture (dense + sparse retrieval) · FAISS/ChromaDB
+- 40% reduction in hallucination rate · 3.2x improvement in answer precision
+
+### Agentic Content Generation Platform
+- 7 specialized agents for SEO research, competitive analysis, content generation
+- Local LLM deployment with Ollama — $0 inference costs · 200+ articles/month
 
 ---
 
 ## 🛠️ Tech Stack
 
-### 💻 Languages
+**Languages**
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 
-### 🤖 AI & LLM
+**AI & LLM**
+
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=langchain&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logoColor=white)
 
-### 🚀 Backend & Infra
+**Backend & Infrastructure**
+
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
@@ -81,11 +76,13 @@ print(engineer)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
-### ☁️ Cloud & DevOps
+**Cloud & DevOps**
+
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 ![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 
 ---
 
@@ -98,15 +95,20 @@ print(engineer)
 
 </div>
 
+<div align="center">
+
+![Streak](https://github-readme-streak-stats.herokuapp.com/?user=ToufiqQureshi&theme=tokyonight)
+
+</div>
+
 ---
 
-## 🤝 Let's Connect
+## 📫 Contact
 
 <div align="center">
 
-**Open to Full Stack AI Engineer roles at product-first startups.**
-
 📩 toufiqqureshi651@gmail.com
+
 🔗 [linkedin.com/in/toufiq-qureshi](https://www.linkedin.com/in/toufiq-qureshi/)
 
 </div>
