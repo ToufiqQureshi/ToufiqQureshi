@@ -1,11 +1,7 @@
 name: Generate README
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight
-  push:
-    paths:
-      - 'README.md'
+  workflow_dispatch:  # Manual only - disabled auto-run
 
 jobs:
   generate-readme:
