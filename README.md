@@ -36,15 +36,14 @@
 
 ### Multi-Agent SEO Automation — Revmerito
 - Orchestrated multi-agent pipeline (CrewAI + LangChain + SeleniumBase) processing 800–1000 URLs/day
-- Eliminated 150+ manual hours/month · 85% reduction in data acquisition costs
-- 99.2% uptime in production
+- Eliminated 150+ manual hours/month · 85% reduction in data acquisition costs · 99.2% uptime
 
 ### RAG Pipeline for Business Intelligence
 - Hybrid search architecture (dense + sparse retrieval) · FAISS/ChromaDB
 - 40% reduction in hallucination rate · 3.2x improvement in answer precision
 
 ### Agentic Content Generation Platform
-- 7 specialized agents for SEO research, competitive analysis, content generation
+- 7 specialized agents — SEO research, competitive analysis, content generation
 - Local LLM deployment with Ollama — $0 inference costs · 200+ articles/month
 
 ---
@@ -90,14 +89,15 @@
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=ToufiqQureshi&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ToufiqQureshi&layout=compact&langs_count=8&theme=tokyonight"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=ToufiqQureshi&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" />
+&nbsp;
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ToufiqQureshi&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" />
 
 </div>
 
 <div align="center">
 
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=ToufiqQureshi&theme=tokyonight)
+![Streak](https://streak-stats.demolab.com?user=ToufiqQureshi&theme=tokyonight&hide_border=true)
 
 </div>
 
