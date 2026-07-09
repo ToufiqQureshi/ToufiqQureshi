@@ -17,17 +17,17 @@
 ## 🏗️ What I've Built
 
 ### Staybooker — AI-Powered Multi-Tenant Hotel Booking SaaS
-> Built and deployed solo. ~75,000 lines of code. Real payments. Real users.
+> Solo-built and deployed. ~74,000 lines of code. Real payments. Real users.
 
 | Category | Details |
 |----------|---------|
-| 🔌 **Backend** | 200+ REST API endpoints · FastAPI · Supabase Postgres |
-| 🗄️ **Data Layer** | 150+ data models · SQLModel · Redis caching with in-memory fallback |
-| 🤖 **AI Agents** | 3 production agents (Agno + Groq LLMs) — hotelier analytics copilot, guest concierge bot, WhatsApp sales agent |
+| 🔌 **Backend** | 195+ REST API endpoints · FastAPI · Supabase Postgres |
+| 🗄️ **Data Layer** | 144 data models · SQLModel · Redis caching with automatic fallback |
+| 🤖 **AI Agents** | Multi-agent layer on Agno + Groq LLMs — a router agent dynamically delegates queries to specialist agents (finance, booking, operations, general), plus a guest concierge bot and WhatsApp sales agent |
 | 💳 **Payments** | HMAC-SHA256 verified Razorpay webhooks · server-side amount validation |
 | 🎨 **Frontend** | React 18 + TypeScript + TanStack Query · shadcn/ui · Recharts · Cloudflare Pages |
 | 🔐 **Security** | JWT auth · OWNER/MANAGER/STAFF RBAC · strict multi-tenant data isolation |
-| 🧪 **Testing** | 59 pytest test suites · GitHub Actions CI |
+| 🧪 **Testing** | 56 pytest suites (570+ passing tests) · GitHub Actions CI |
 | 📡 **Integrations** | WhatsApp Business API · STAAH Channel Manager · Google Reviews API · SSE real-time updates |
 
 ---
@@ -36,15 +36,15 @@
 
 ### Multi-Agent SEO Automation — Revmerito
 - Orchestrated multi-agent pipeline (CrewAI + LangChain + SeleniumBase) processing 800–1000 URLs/day
-- Eliminated 150+ manual hours/month · 85% reduction in data acquisition costs · 99.2% uptime
+- Eliminated 150+ manual hours/month · 99.2% uptime
 
-### RAG Pipeline for Business Intelligence
-- Hybrid search architecture (dense + sparse retrieval) · FAISS/ChromaDB
-- 40% reduction in hallucination rate · 3.2x improvement in answer precision
-
-### Agentic Content Generation Platform
-- 7 specialized agents — SEO research, competitive analysis, content generation
+### End-to-End Agentic Content Generation Platform
+- 5-agent sequential pipeline (Requirement → Content Generation → Quality Checker → SEO → Publishing) — fully automates content production and auto-deploys to cPanel/H-panel
 - Local LLM deployment with Ollama — $0 inference costs · 200+ articles/month
+
+### AI Candidate Analyzer — Agno Global Hackathon
+- Evaluates candidates against a job description using GitHub and LinkedIn signals, not just their resume
+- GitHub API + Exa Search API wrapped as Agno tools
 
 ---
 
@@ -62,7 +62,6 @@
 
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=langchain&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logoColor=white)
 
@@ -80,8 +79,6 @@
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 ![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 
 ---
 
@@ -92,12 +89,6 @@
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ToufiqQureshi&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" />
 &nbsp;
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ToufiqQureshi&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" />
-
-</div>
-
-<div align="center">
-
-![Streak](https://streak-stats.demolab.com?user=ToufiqQureshi&theme=tokyonight&hide_border=true)
 
 </div>
 
