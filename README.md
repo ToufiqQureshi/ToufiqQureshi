@@ -40,24 +40,5 @@
 ### 📊 GitHub Stats
 
 <div align="center">
-  
-[![Trophies](https://github-profile-trophy.vercel.app/?username=ToufiqQureshi&theme=radical&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
-<br/>
-
-<div align="center">
-  
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ToufiqQureshi&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats)
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ToufiqQureshi&theme=radical&hide_border=true&background=0D1117)](https://git.io/streak-stats)
-
-</div>
-
-<br/>
-
-<div align="center">
-  
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ToufiqQureshi&layout=compact&theme=radical&hide_border=true&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats)
-
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ToufiqQureshi&theme=radical&hide_border=true&background=0D1117" alt="GitHub Streak" />
 </div>
